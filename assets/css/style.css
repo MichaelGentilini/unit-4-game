@@ -1,0 +1,121 @@
+body {
+  background: url(../images/rome-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+
+}
+
+h1 {
+  font-size: 30px;
+  color: white;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Layout of Boxes */
+
+.title-box,
+.instructions,
+.random,
+.win-total,
+.loss-total,
+.score-header,
+.wins-total,
+.score-header,
+.score {
+  border: lightgrey inset;
+  border-width: .5em;
+}
+
+
+.title-box {
+  padding: 2em;
+  background: #FF66A4;
+  text-align: center;
+}
+
+.instructions,
+.coins {
+  background-color: #fff;
+}
+
+.random {
+  padding-top: 30px;
+}
+
+.loss-total,
+.random,
+.wins-total {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #4CE0FF;
+  color: white;
+}
+
+.score-header,
+.score {
+  padding: 2em;
+  background: #4CE0FF;
+  text-align: center;
+  color: white;
+}
+
+/* Coins */
+
+.coins {
+  border: whitesmoke;
+  border-width: .1em;
+}
+
+.coin1,
+.coin2,
+.coin3,
+.coin4 {
+  height: 150px;
+  width: 150px;
+  background: #ffff00;
+  border: lightgrey outset;
+  border-width: .1em;
+  margin: 1em 2em;
+  padding: .5em;
+  float: left;
+  border-radius: 50%;
+}
+
+.coin1 {
+  background-image: url("../images/coin1.jpg");
+  background-size: 100%;
+}
+
+.coin2 {
+  background-image: url("../images/coin2.jpg");
+  background-size: 100%;
+}
+
+.coin3 {
+  background-image: url("../images/coin3.jpg");
+  background-size: 100%;
+}
+
+.coin4 {
+  background-image: url("../images/coin4.jpg");
+  background-size: 100%;
+}
+
+#btn-on,
+#btn-off {
+  padding: 15px;
+  font-size: 35px;
+  border-radius: 10%;
+}
