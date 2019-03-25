@@ -45,8 +45,7 @@ p {
   text-align: center;
 }
 
-.instructions,
-.coins {
+.instructions {
   background-color: #fff;
 }
 
@@ -81,13 +80,13 @@ p {
 .coin1,
 .coin2,
 .coin3,
-.coin4 {
-  height: 150px;
-  width: 150px;
-  background: #ffff00;
+.coin4,
+.crystal-image {
+  height: 100px;
+  width: 100px;
   border: lightgrey outset;
   border-width: .1em;
-  margin: 1em 2em;
+  margin: 1em .2em;
   padding: .5em;
   float: left;
   border-radius: 50%;
@@ -113,9 +112,9 @@ p {
   background-size: 100%;
 }
 
-#btn-on,
-#btn-off {
-  padding: 15px;
-  font-size: 35px;
-  border-radius: 10%;
+.btn-on,
+.btn-off {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
 }

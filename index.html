@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta credit="Royalty Free Music from Bensound">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -16,7 +17,7 @@
   <div class="container-fluid overall">
     <!-- Header box goes here -->
     <div class="row">
-      <div class="col-4">
+      <div class="col-5">
         <div class="title-box">
           <h1>Coin Collector Game</h1>
         </div>
@@ -54,12 +55,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-5 coins">
-        <div class="">
-          <div class="coin1"></div>
-          <div class="coin2"></div>
-          <div class="coin3"></div>
-          <div class="coin4"></div>
+      <div class="col-6 ">
+
+        <div class="coins">
+          <div class="coin1 coin-image"></div>
+          <div class="coin2 coin-image"></div>
+          <div class="coin3 coin-image"></div>
+          <div class="coin4 coin-image"></div>
         </div>
       </div>
     </div>
@@ -75,20 +77,101 @@
     </div>
   </div>
   <div class="row">
-    <a id="btn-on" class="btn btn-success ml-4 mt-4 mr-2" href="#" role="button">play background music</a>
-    <a id="btn-off" class="btn btn-info mt-4" href="#" role="button">stop background music</a>
+    <div id="musicControls" class="text-center">
+      <button class="btn btn-success btn-lg btn-on mt-3 mr-5 ml-5">
+        <span class="fa fa-music"></span>&nbsp;&nbspPlay Theme!</button>
+      <button class="btn btn-info btn-lg btn-md btn-off mt-3 ">
+        <span class="fa fa-pause"></span>&nbsp;&nbsp;Pause Song</button>
+    </div>
+
   </div>
   </div>
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <script type="text/javascript">
+    $(document).ready(function () {
 
+      // declare arrays
+      var numberToGuess = 0,
+        wins = 0,
+        losses = 0,
+        totalScore = 0;
+
+      function resetAll() {
+        numberToGuess = "";
+        //  ?$("#numberToGuess, #wins, #losses, #totalScore").empty();
+      }
+
+      var randomNumber = parseInt(getRandomNumber(19, 120)),
+        coinValue1 = parseInt(getRandomNumber(1, 12)),
+        coinValue2 = parseInt(getRandomNumber(1, 12)),
+        coinValue3 = parseInt(getRandomNumber(1, 12)),
+        coinValue4 = parseInt(getRandomNumber(1, 12));
+      console.log("radom number is " + randomNumber);
+
+      function getRandomNumber(a, b) {
+        return Math.floor(Math.random() * (1 + a - b)) + b;
+      }
+
+      // Add random value to coins
+      $(".coin-image.coin1").on("click", function () {
+        totalScore = (totalScore += coinValue1);
+        $(".score").text(totalScore);
+      });
+
+      $(".coin-image.coin2").on("click", function () {
+        totalScore = (totalScore += coinValue2);
+        $(".score").text(totalScore);
+      });
+
+      $(".coin-image.coin3").on("click", function () {
+        totalScore = (totalScore += coinValue3);
+        $(".score").text(totalScore);
+      });
+
+      $(".coin-image.coin4").on("click", function () {
+        totalScore = (totalScore += coinValue4);
+        $(".score").text(totalScore);
+      });
+
+      console.log(totalScore);
+      console.log(randomNumber);
+
+      if (randomNumber > totalScore) {
+        console.log("randomnumber: " + randomNumber);
+        console.log("totalScore: " + totalScore);
+        resetAll();
+      } else if (randomNumber < totalScore) {
+        alert("Try again!")
+      } else {
+        alert("Great Job, you matched the total score of " + totalScore)
+      };
+
+      // Music Button
+
+      // Gets Link for Theme Song
+      var audioElement = document.createElement("audio")
+      audioElement.setAttribute("src", "assets/music/epic.mp3");
+
+      // Theme Button
+      $(".btn-on").on("click", function () {
+        audioElement.play();
+      })
+      $(".btn-off").on("click", function () {
+        audioElement.pause();
+      });
+
+      // resetAll();
+      $(".random").text(randomNumber);
+    });
+  </script>
 
 
 
 
 
   <script src="/assets/javascript/game.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
