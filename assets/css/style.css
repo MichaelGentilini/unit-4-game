@@ -11,7 +11,6 @@ h2,
 h3,
 h4 {
   text-align: center;
-
 }
 
 h1 {
@@ -35,13 +34,12 @@ p {
 .score-header,
 .score {
   border: lightgrey inset;
-  border-width: .5em;
+  border-width: 0.5em;
 }
 
-
 .title-box {
-  padding: 2em;
-  background: #FF66A4;
+  padding: 1em;
+  background: #ff66a4;
   text-align: center;
 }
 
@@ -50,31 +48,38 @@ p {
 }
 
 .random {
-  padding-top: 30px;
+  background-color: #ff66a4;
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
 }
 
 .loss-total,
-.random,
 .wins-total {
   text-align: center;
-  vertical-align: middle;
-  background-color: #4CE0FF;
+  background-color: #4ce0ff;
   color: white;
+  padding-top: 10px;
+  font-weight: 500;
 }
 
 .score-header,
 .score {
-  padding: 2em;
-  background: #4CE0FF;
+  padding: 0.5em;
+  background: #4ce0ff;
   text-align: center;
   color: white;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 /* Coins */
 
 .coins {
   border: whitesmoke;
-  border-width: .1em;
+  border-width: 0.1em;
 }
 
 .coin1,
@@ -85,11 +90,19 @@ p {
   height: 100px;
   width: 100px;
   border: lightgrey outset;
-  border-width: .1em;
-  margin: 1em .2em;
-  padding: .5em;
+  border-width: 0.1em;
+  margin: 1em 0.2em;
+  padding: 0.5em;
   float: left;
   border-radius: 50%;
+}
+
+.coin1:hover,
+.coin2:hover,
+.coin3:hover,
+.coin4:hover {
+  height: 110px;
+  width: 110px;
 }
 
 .coin1 {
@@ -112,6 +125,23 @@ p {
   background-size: 100%;
 }
 
+/* --------------------------------------------- */
+/****** thinking about adding the value on press ******/
+
+.coin1 p,
+.coin2 p,
+.coin3 p,
+.coin4 p {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 0.6em;
+  /* visibility: hidden; */
+}
+/* --------------------------------------------- */
+
+/* Music button */
 .btn-on,
 .btn-off {
   padding: 10px;
