@@ -101,8 +101,8 @@ p {
 .coin2:hover,
 .coin3:hover,
 .coin4:hover {
-  height: 110px;
-  width: 110px;
+  height: 115px;
+  width: 115px;
 }
 
 .coin1 {
@@ -139,6 +139,7 @@ p {
   padding-top: 0.6em;
   /* visibility: hidden; */
 }
+
 /* --------------------------------------------- */
 
 /* Music button */
