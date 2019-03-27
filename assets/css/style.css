@@ -92,13 +92,8 @@ p {
 .coin2:hover,
 .coin3:hover,
 .coin4:hover {
-<<<<<<< HEAD
   height: 150px;
   width: 150px;
-=======
-  height: 115px;
-  width: 115px;
->>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
 }
 
 .coin1 {
@@ -121,36 +116,12 @@ p {
   background-size: 100%;
 }
 
-<<<<<<< HEAD
-=======
-/* --------------------------------------------- */
-/****** thinking about adding the value on press ******/
-
-.coin1 p,
-.coin2 p,
-.coin3 p,
-.coin4 p {
-  color: white;
-  font-size: 35px;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 0.6em;
-  /* visibility: hidden; */
-}
-
-/* --------------------------------------------- */
-
->>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
 /* Music button */
 .btn-on,
 .btn-off {
   padding: 15px;
   font-size: 20px;
-<<<<<<< HEAD
   border-radius: 35%;
   width: 8em;
   background: #4ce0ff;
-=======
-  border-radius: 50%;
->>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
 }
