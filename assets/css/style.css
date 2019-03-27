@@ -6,93 +6,84 @@ body {
   background-size: cover;
 }
 
-h1,
 h2,
 h3,
 h4 {
   text-align: center;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 100px;
   color: white;
+  font-weight: 800;
+  font-family: "Baloo Chettan", cursive;
+  background: #4ce0ff;
 }
 
 p {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 /* Layout of Boxes */
 
-.title-box,
-.instructions,
-.random,
-.win-total,
-.loss-total,
-.score-header,
-.wins-total,
-.score-header,
-.score {
-  border: lightgrey inset;
-  border-width: 0.5em;
-}
-
-.title-box {
-  padding: 1em;
-  background: #ff66a4;
-  text-align: center;
-}
-
 .instructions {
+  margin-top: 50px;
   background-color: #fff;
+  border-width: 0.5em;
+  padding: 20px 20px;
 }
 
-.random {
-  background-color: #ff66a4;
-  padding-top: 20px;
-  font-size: 30px;
+.total,
+.score-header,
+.score,
+.random,
+.rand-num {
+  /* background-color: #ff66a4; */
+  /* padding: 0.em; */
   font-weight: 700;
+  font-weight: 600;
+  font-size: 40px;
   color: white;
   text-align: center;
+  background: #4ce0ff;
 }
 
 .loss-total,
 .wins-total {
   text-align: center;
-  background-color: #4ce0ff;
+  background: #4ce0ff;
   color: white;
-  padding-top: 10px;
-  font-weight: 500;
+  padding-top: 25px;
+  font-weight: 700;
 }
 
-.score-header,
-.score {
-  padding: 0.5em;
-  background: #4ce0ff;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  font-weight: 700;
+.wins,
+.losses {
+  font-size: 40px;
 }
 
 /* Coins */
 
 .coins {
   border: whitesmoke;
-  border-width: 0.1em;
+  background-image: url("../images/sand-background.jpg");
+
+  padding: 50px;
+  border: dotted black;
+  border-radius: 25%;
+  margin: auto;
 }
 
 .coin1,
 .coin2,
 .coin3,
-.coin4,
-.crystal-image {
-  height: 100px;
-  width: 100px;
-  border: lightgrey outset;
-  border-width: 0.1em;
-  margin: 1em 0.2em;
-  padding: 0.5em;
+.coin4 {
+  height: 125px;
+  width: 125px;
+  margin: 5em 3em;
+  padding: 1em;
   float: left;
   border-radius: 50%;
 }
@@ -101,8 +92,13 @@ p {
 .coin2:hover,
 .coin3:hover,
 .coin4:hover {
+<<<<<<< HEAD
+  height: 150px;
+  width: 150px;
+=======
   height: 115px;
   width: 115px;
+>>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
 }
 
 .coin1 {
@@ -125,6 +121,8 @@ p {
   background-size: 100%;
 }
 
+<<<<<<< HEAD
+=======
 /* --------------------------------------------- */
 /****** thinking about adding the value on press ******/
 
@@ -142,10 +140,17 @@ p {
 
 /* --------------------------------------------- */
 
+>>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
 /* Music button */
 .btn-on,
 .btn-off {
-  padding: 10px;
+  padding: 15px;
   font-size: 20px;
+<<<<<<< HEAD
+  border-radius: 35%;
+  width: 8em;
+  background: #4ce0ff;
+=======
   border-radius: 50%;
+>>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
 }

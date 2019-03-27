@@ -8,23 +8,58 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<<<<<<< HEAD
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+
+
+=======
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+>>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
   <title>Coin Collector Game</title>
 
 </head>
 
 <body>
-  <div class="container-fluid overall">
+  <div class="container overall">
     <!-- Header box goes here -->
-    <div class="row">
-      <div class="col-5">
-        <div class="title-box">
-          <h1>Coin Collector Game</h1>
-        </div>
-      </div>
+    <div class="blank">
+
     </div>
+<<<<<<< HEAD
+
+    <div class="jumbotron mt-5">
+      <h1 class="display-2 text-center" id="mainhead">Coin Collector Game</h1>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-2 mt-3">
+          <div class="wins-total">
+            <p>
+              <i class="fas fa-thumbs-up fa-3x"></i>
+            </p>
+            <p><span class="winner">0</span></p>
+          </div>
+        </div>
+        <div class="col-6 mt-5">
+          <div id="musicControls" class="text-center">
+            <button class="btn btn-success btn-lg btn-on mt-3 mr-5 ml-5" ;>
+              <span class="fa fa-music"><span>&nbsp;&nbsp;Music On</span></button>
+            <button class="btn btn-info btn-lg btn-md btn-off mt-3 ">
+              <span class="fa fa-pause"><span>&nbsp;Music Off</span></button>
+          </div>
+        </div>
+        <div class="col-2 mt-2">
+          <div class="loss-total">
+            <p><i class="fas fa-thumbs-down fa-3x loss-total"></i></p>
+            <p><span class="loser">0</span></p>
+          </div>
+          <div class="col-1"></div>
+=======
     Instructions go here
     <div class="row">
       <div class="col-6">
@@ -39,26 +74,31 @@
           <p>The value of each crystal is hidden from you until you click on it.</p>
           <p>Each time when the game starts, the game will change the value of each crystal.</p>
           <h4>Good Luck!</h4>
+>>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
         </div>
       </div>
     </div>
-    <!-- Track wins and losses -->
-    <div class="row">
-      <div class="col-3 random">
-        <h2 class="rand-num">0</h2>
-      </div>
-      <div class="col-2">
-        <div class="wins-total">
-          <p>Wins: &nbsp;&nbsp; <span class="wins">0</span></p>
-        </div>
-        <div class="loss-total">
-          <p>Losses: &nbsp;&nbsp; <span class="losses">0</span></p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-6 ">
 
+
+    <div class="row">
+
+      <div class="col-1">
+      </div>
+      <div class="col score-header">
+        <h3>Random</h3>
+        <div class="col-12 random">
+          <h2 class="rand-num">0</h2>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+      <div class="col"></div>
+
+      <div class="col score-header">
+        <h3>Total Score</h3>
+        <div class="col-12 score">
+          <h2 class="total">0</h2>
+=======
         <div class="coins">
           <div class="btn coin1 coin-image" id="1"></div>
           <div class="coin2 coin-image value=" id="2"></div>
@@ -66,32 +106,159 @@
             <p>value</p>
           </div>
           <div class="coin4 coin-image value=" id="4"></div>
+>>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-3 score-header">
-        <h3>Your total score is:</h3>
+      <div class="col-1">
       </div>
     </div>
-    <div class="row">
-      <div class="col-3 score">
-        <h2 class="total">0</h2>
+
+  </div>
+
+  <div class=" row justify-content-center mt-5">
+    <div class="col- coins ">
+      <div class="coin1 coin-image" id="1">
+      </div>
+      <div class="coin2 coin-image" id="2">
+      </div>
+      <div class="coin3 coin-image" id="3">
+      </div>
+      <div class="coin4 coin-image" id="4">
+      </div>
+      <div class="coin5 coin-image" id="4">
       </div>
     </div>
   </div>
-  <div class="row">
-    <div id="musicControls" class="text-center">
-      <button class="btn btn-success btn-lg btn-on mt-3 mr-5 ml-5">
-        <span class="fa fa-music"></span>&nbsp;&nbspPlay Theme!</button>
-      <button class="btn btn-info btn-lg btn-md btn-off mt-3 ">
-        <span class="fa fa-pause"></span>&nbsp;&nbsp;Pause Song</button>
+
+
+<<<<<<< HEAD
+  <!-- Instruction -->
+  <div class=" row justify-content-center" <div class="col-8">
+    <div class=" instructions">
+      <p>A random number has been created by the Gods on Mount Olympus</p>
+      <p> There are four ancient coins below with a random value. </p>
+      <p> By clicking on a coin, you will add its value to your total score</p>
+      <ul>
+        <li>
+          <p>If your total score goes above the random number, you may be fed to the lions</p>
+        </li>
+        <li>
+          <p>Win the game by matching the random number and untold glory shall beseach you</p>
+        </li>
+
+      </ul>
+      <h4>May the Gods be with you!</h4>
     </div>
+  </div>
 
 
+
+
+  <script>
+    $(document).ready(function () {
+
+      // declare arrays
+      var numberToGuess = 0,
+        wins = 0,
+        losses = 0,
+        totalScore = 0;
+
+      function resetAll() {
+        totalScore = 0;
+        randomNumber = parseInt(getRandomNumber(19, 120));
+        coin1 = parseInt(getRandomNumber(1, 12));
+        coin2 = parseInt(getRandomNumber(1, 12));
+        coin3 = parseInt(getRandomNumber(1, 12));
+        coin4 = parseInt(getRandomNumber(1, 12));
+        $(".random").text(randomNumber);
+        $(".score").text(totalScore);
+        // $(".totalScore").empty();
+      };
+
+      // Generate random numbers
+      var randomNumber = parseInt(getRandomNumber(19, 120)),
+        coinValues = {
+          coin1: parseInt(getRandomNumber(1, 12)),
+          coin2: parseInt(getRandomNumber(1, 12)),
+          coin3: parseInt(getRandomNumber(1, 12)),
+          coin4: parseInt(getRandomNumber(1, 12))
+        };
+
+      function getRandomNumber(a, b) {
+        return Math.floor(Math.random() * (1 + a - b)) + b;
+      }
+
+
+      // Add random value to coins
+      $(".coin-image").on("click", function () {
+        var id = $(this).attr("id");
+        totalScore += coinValues["coin" + id];
+        $(".score").text(totalScore);
+        updateUser(randomNumber, totalScore);
+      });
+
+      // Track wins and losses
+      function updateUser(randomNumber, totalScore) {
+        if (randomNumber > totalScore) {
+          console.log("randomnumber: " + randomNumber);
+          console.log("totalScore: " + totalScore);
+
+        } else if (randomNumber < totalScore) {
+          losses++
+          $(".loser").text(losses);
+          alert("Try again!")
+          resetAll();
+        } else {
+          wins++
+          $(".winner").text(wins);
+          alert("Great Job, you matched the total score of " + totalScore)
+          resetAll();
+        }
+      }
+
+      //                      Music Buttons
+
+      // Gets Link for Theme Song
+      var audioElement = document.createElement("audio")
+      audioElement.setAttribute("src", "assets/music/epic.mp3");
+
+      // Theme Button
+      $(".btn-on").on("click", function () {
+        audioElement.play();
+      })
+      $(".btn-off").on("click", function () {
+        audioElement.pause();
+      });
+
+      // Play sound for Wins/Losses
+
+      function preload() {
+        soundFormats('mp3', 'ogg');
+        mySound = loadSound('./assets/music/Applause.mp3');
+      }
+
+      function setup() {
+        mySound.setVolume(1);
+        mySound.play();
+      }
+
+      $(".random").text(randomNumber);
+    });
+  </script>
+
+
+
+
+
+  <!-- <script src="/assets/javascript/game.js"> </script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+=======
   </div>
   </div>
   script>
+>>>>>>> 98acb54db7c2dfcdd8c3a4df156f1218c4062842
 </body>
 
 </html>
