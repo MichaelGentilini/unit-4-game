@@ -67,9 +67,7 @@ p {
 /* Coins */
 
 .coins {
-  border: whitesmoke;
   background-image: url("../images/sand-background.jpg");
-
   padding: 50px;
   border: dotted black;
   border-radius: 25%;
@@ -125,3 +123,5 @@ p {
   width: 8em;
   background: #4ce0ff;
 }
+
+.emptyContainer {}

@@ -1,109 +1,112 @@
-// $(document).ready(function () { // declare arrays
-//   var numberToGuess = 0,
-//     wins = 0,
-//     losses = 0,
-//     totalScore = 0;
+$(document).ready(function () {
 
-//   function resetAll() {
-//     numberToGuess = "";
-//     //  ?$("#numberToGuess, #wins, #losses, #totalScore").empty();
-//   }
+  // declare arrays
 
-function resetAll() {
-  numberToGuess = "";
-  //  ?$("#numberToGuess, #wins, #losses, #totalScore").empty();
-}
+  var wins = 0,
+    losses = 0,
+    totalScore = 0;
+  var audio = new Audio('assets//music/money.mp3'),
+    boo = new Audio('assets//music/heckles.mp3'),
+    lion = new Audio('assets//music/lion.mp3'),
+    yay = new Audio('assets//music/applause.mp3');
 
-//   var randomNumber = parseInt(getRandomNumber(19, 120)),
-//     coinValues = {
-//       coin1: parseInt(getRandomNumber(1, 12)),
-//       coin2: parseInt(getRandomNumber(1, 12)),
-//       coin3: parseInt(getRandomNumber(1, 12)),
-//       coin4: parseInt(getRandomNumber(1, 12))
-//     };
+  function resetAll() {
 
-//   function getRandomNumber(a, b) {
-//     return Math.floor(Math.random() * (1 + a - b)) + b;
-//   }
+    if (losses === 3) {
+      $(".winner,.loser").empty();
+    } else {
+      totalScore = 0;
+      randomNumber = parseInt(getRandomNumber(19, 40));
+      coin1 = parseInt(getRandomNumber(1, 12));
+      coin2 = parseInt(getRandomNumber(1, 12));
+      coin3 = parseInt(getRandomNumber(1, 12));
+      coin4 = parseInt(getRandomNumber(1, 12));
+      $(".random").text(randomNumber);
+      $(".score").text(totalScore);
+      boo.pause();
+      lion.pause();
+      yay.pause();
+    }
 
-//   $(".coin-image").on("click", function () {
-//     var id = $(this).attr("id");
-//     totalScore += coinValues["coin" + id];
-//     $(".score").text(totalScore);
-//     updateUser(randomNumber, totalScore);
-//   });
+  };
 
-//   // // Add random value to coins
-//   // $(".coin-image.coin1").on("click", function () {
+  // Generate random numbers
+  var randomNumber = parseInt(getRandomNumber(19, 40)),
+    coinValues = {
+      coin1: parseInt(getRandomNumber(1, 12)),
+      coin2: parseInt(getRandomNumber(1, 12)),
+      coin3: parseInt(getRandomNumber(1, 12)),
+      coin4: parseInt(getRandomNumber(1, 12))
+    };
 
-//   //   $(".coin1").html(coinValue1);
-//   //   totalScore = (totalScore += coinValue1);
-//   //   $(".score").text(totalScore);
-//   // });
-
-//   // $(".coin-image.coin2").on("click", function () {
-//   //   totalScore = (totalScore += coinValue2);
-//   //   $(".score").text(totalScore);
-//   // });
-
-//   // $(".coin-image.coin3").on("click", function () {
-//   //   totalScore = (totalScore += coinValue3);
-//   //   $(".score").text(totalScore);
-//   // });
-
-//   // $(".coin-image.coin4").on("click", function () {
-//   //   totalScore = (totalScore += coinValue4);
-//   //   $(".score").text(totalScore);
-//   // });
+  function getRandomNumber(a, b) {
+    return Math.floor(Math.random() * (1 + a - b)) + b;
+  }
 
 
-//   // Function to track wins and losses
-//   function updateUser(randomNumber, totalScore) {
-//     if (randomNumber > totalScore) {
-//       console.log("randomnumber: " + randomNumber);
-//       console.log("totalScore: " + totalScore);
-//       resetAll();
-//     } else if (randomNumber < totalScore) {
-//       alert("Try again!")
-//       losses++
+  // Add random value to coins
+  $(".coin-image").on("click", function () {
+    var id = $(this).attr("id");
+    totalScore += coinValues["coin" + id];
+    audio.play();
+    $(".score").text(totalScore);
+    updateUser(randomNumber, totalScore);
+  });
 
-//     } else {
-//       alert("Great Job, you matched the total score of " + totalScore)
-//       wins++
-//       $(".loser").text(wins);
+  // Track wins and losses
+  function updateUser(randomNumber, totalScore) {
+    if (randomNumber > totalScore) {
 
-//     }
-//   }
+      console.log("totalScore: " + totalScore);
 
-
-
-//   // Music Button
-
-//   // Gets Link for Theme Song
-//   var audioElement = document.createElement("audio")
-//   audioElement.setAttribute("src", "assets/music/epic.mp3");
-
-//   // Theme Button
-//   $(".btn-on").on("click", function () {
-//     audioElement.play();
-//   })
-//   $(".btn-off").on("click", function () {
-//     audioElement.pause();
-//   });
-
-//   // resetAll();
-//   $(".random").text(randomNumber);
+    } else if (randomNumber < totalScore) {
+      losses++
+      $(".loser").text(losses);
 
 
-//   // Play sound for Wins/Losses
+      if (losses === 5) {
+        lion.play();
+        alert("Better luck next time!");
+        resetAll();
+      } else {
+        boo.play();
+        alert("The crowd is not happy!");
+        resetAll();
+      }
+    } else {
+      wins++
+      yay.play();
+      $(".winner").text(wins);
+      alert("Great Job, you shall be free with your score of " + totalScore)
+      resetAll();
+    }
+  }
 
-//   function preload() {
-//     soundFormats('mp3', 'ogg');
-//     mySound = loadSound('assets/music/Applause.mp3');
-//   }
+  //                      Music Buttons
 
-//   function setup() {
-//     mySound.setVolume(0.1);
-//     mySound.play();
-//   }
-// });
+  // Gets Link for Theme Song
+  var audioElement = document.createElement("audio")
+  audioElement.setAttribute("src", "assets/music/epic.mp3");
+
+  // Theme Button
+  $(".btn-on").on("click", function () {
+    audioElement.play();
+  })
+  $(".btn-off").on("click", function () {
+    audioElement.pause();
+  });
+
+  // Play sound for Wins/Losses
+
+  function preload() {
+    soundFormats('mp3', 'ogg');
+    mySound = loadSound('./assets/music/Applause.mp3');
+  }
+
+  function setup() {
+    mySound.setVolume(1);
+    mySound.play();
+  }
+
+  $(".random").text(randomNumber);
+});

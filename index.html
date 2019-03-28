@@ -68,7 +68,9 @@
         </div>
       </div>
 
-      <div class="col"></div>
+      <div class="col-5"><div class="emptyContainer">
+
+      </div></div>
 
       <div class="col score-header">
         <h3>Total Score</h3>
@@ -105,121 +107,24 @@
       <p> There are four ancient coins below with a random value. </p>
       <p> By clicking on a coin, you will add its value to your total score</p>
       <ul>
-        <li>
-          <p>If your total score goes above the random number, you may be fed to the lions</p>
-        </li>
-        <li>
-          <p>Win the game by matching the random number and untold glory shall beseach you</p>
-        </li>
-
-      </ul>
+          <li>
+            <p>Win the game by matching the random number and untold glory shall beseach you</p>
+          </li>
+          <li>
+            <p>If your total score goes above the random number, the crowd will get angry</p>
+          </li>
+          <li>
+            <p>If you lose 5 times, there is a special surprise!</p>
+          </li>
+        </ul>
       <h4>May the Gods be with you!</h4>
     </div>
   </div>
 
-
-
-
-  <script>
-    $(document).ready(function () {
-
-      // declare arrays
-      var numberToGuess = 0,
-        wins = 0,
-        losses = 0,
-        totalScore = 0;
-
-      function resetAll() {
-        totalScore = 0;
-        randomNumber = parseInt(getRandomNumber(19, 120));
-        coin1 = parseInt(getRandomNumber(1, 12));
-        coin2 = parseInt(getRandomNumber(1, 12));
-        coin3 = parseInt(getRandomNumber(1, 12));
-        coin4 = parseInt(getRandomNumber(1, 12));
-        $(".random").text(randomNumber);
-        $(".score").text(totalScore);
-        // $(".totalScore").empty();
-      };
-
-      // Generate random numbers
-      var randomNumber = parseInt(getRandomNumber(19, 120)),
-        coinValues = {
-          coin1: parseInt(getRandomNumber(1, 12)),
-          coin2: parseInt(getRandomNumber(1, 12)),
-          coin3: parseInt(getRandomNumber(1, 12)),
-          coin4: parseInt(getRandomNumber(1, 12))
-        };
-
-      function getRandomNumber(a, b) {
-        return Math.floor(Math.random() * (1 + a - b)) + b;
-      }
-
-
-      // Add random value to coins
-      $(".coin-image").on("click", function () {
-        var id = $(this).attr("id");
-        totalScore += coinValues["coin" + id];
-        $(".score").text(totalScore);
-        updateUser(randomNumber, totalScore);
-      });
-
-      // Track wins and losses
-      function updateUser(randomNumber, totalScore) {
-        if (randomNumber > totalScore) {
-          console.log("randomnumber: " + randomNumber);
-          console.log("totalScore: " + totalScore);
-
-        } else if (randomNumber < totalScore) {
-          losses++
-          $(".loser").text(losses);
-          alert("Try again!")
-          resetAll();
-        } else {
-          wins++
-          $(".winner").text(wins);
-          alert("Great Job, you matched the total score of " + totalScore)
-          resetAll();
-        }
-      }
-
-      //                      Music Buttons
-
-      // Gets Link for Theme Song
-      var audioElement = document.createElement("audio")
-      audioElement.setAttribute("src", "assets/music/epic.mp3");
-
-      // Theme Button
-      $(".btn-on").on("click", function () {
-        audioElement.play();
-      })
-      $(".btn-off").on("click", function () {
-        audioElement.pause();
-      });
-
-      // Play sound for Wins/Losses
-
-      function preload() {
-        soundFormats('mp3', 'ogg');
-        mySound = loadSound('./assets/music/Applause.mp3');
-      }
-
-      function setup() {
-        mySound.setVolume(1);
-        mySound.play();
-      }
-
-      $(".random").text(randomNumber);
-    });
-  </script>
-
-
-
-
-
-  <!-- <script src="/assets/javascript/game.js"> </script>
-  </script>
+  <script src="/assets/javascript/game.js"> </script>
+  <!-- </script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
