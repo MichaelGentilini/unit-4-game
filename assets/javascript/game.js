@@ -5,33 +5,29 @@ $(document).ready(function () {
   var wins = 0,
     losses = 0,
     totalScore = 0;
-  var audio = new Audio('assets//music/money.mp3'),
-    boo = new Audio('assets//music/heckles.mp3'),
-    lion = new Audio('assets//music/lion.mp3'),
-    yay = new Audio('assets//music/applause.mp3');
+  var audio = new Audio('./assets//music/money.mp3'),
+    boo = new Audio('./assets//music/heckles.mp3'),
+    lion = new Audio('./assets//music/lion.mp3'),
+    yay = new Audio('./assets//music/applause.mp3');
 
   function resetAll() {
 
-    if (losses === 3) {
-      $(".winner,.loser").empty();
-    } else {
-      totalScore = 0;
-      randomNumber = parseInt(getRandomNumber(19, 40));
-      coin1 = parseInt(getRandomNumber(1, 12));
-      coin2 = parseInt(getRandomNumber(1, 12));
-      coin3 = parseInt(getRandomNumber(1, 12));
-      coin4 = parseInt(getRandomNumber(1, 12));
-      $(".random").text(randomNumber);
-      $(".score").text(totalScore);
-      boo.pause();
-      lion.pause();
-      yay.pause();
-    }
 
+    totalScore = 0;
+    randomNumber = parseInt(getRandomNumber(19, 120));
+    coin1 = parseInt(getRandomNumber(1, 12));
+    coin2 = parseInt(getRandomNumber(1, 12));
+    coin3 = parseInt(getRandomNumber(1, 12));
+    coin4 = parseInt(getRandomNumber(1, 12));
+    $(".random").text(randomNumber);
+    $(".score").text(totalScore);
+    boo.pause();
+    lion.pause();
+    yay.pause();
   };
 
   // Generate random numbers
-  var randomNumber = parseInt(getRandomNumber(19, 40)),
+  var randomNumber = parseInt(getRandomNumber(19, 120)),
     coinValues = {
       coin1: parseInt(getRandomNumber(1, 12)),
       coin2: parseInt(getRandomNumber(1, 12)),
@@ -86,7 +82,7 @@ $(document).ready(function () {
 
   // Gets Link for Theme Song
   var audioElement = document.createElement("audio")
-  audioElement.setAttribute("src", "assets/music/epic.mp3");
+  audioElement.setAttribute("src", "./assets/music/epic.mp3");
 
   // Theme Button
   $(".btn-on").on("click", function () {
