@@ -5,10 +5,10 @@ $(document).ready(function () {
   var wins = 0,
     losses = 0,
     totalScore = 0;
-  var audio = new Audio('./assets//music/money.mp3'),
-    boo = new Audio('./assets//music/heckles.mp3'),
-    lion = new Audio('./assets//music/lion.mp3'),
-    yay = new Audio('./assets//music/applause.mp3');
+  var audio = new Audio('assets//music/money.mp3'),
+    boo = new Audio('assets//music/heckles.mp3'),
+    lion = new Audio('assets//music/lion.mp3'),
+    yay = new Audio('assets//music/applause.mp3');
 
   function resetAll() {
 
