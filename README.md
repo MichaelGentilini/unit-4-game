@@ -17,5 +17,5 @@ If your total score goes above the random number, the crowd will get angry
 - if the user wins or loses there's an alert and boos can be heard except for promise in DOMexception.
 - Also, an image of Commodus with a thumbs up or down signifies wins and losses
 
-The project is linked to [github](https://dallasappraiser.github.io/Bootstrap-Portfolio/unit-4-game)
+The project is linked to [github](https://dallasappraiser.github.io/Bootstrap-Portfolio/portfolio.html)
 and [github](https://dallasappraiser.github.io/unit-4-game)
