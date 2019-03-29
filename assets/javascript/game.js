@@ -6,9 +6,12 @@ $(document).ready(function () {
     losses = 0,
     totalScore = 0;
   var audio = new Audio('assets//music/money.mp3'),
-    boo = new Audio('assets//music/heckles.mp3'),
+    boo = new Audio('./assets//music/heckles.mp3'),
     lion = new Audio('assets//music/lion.mp3'),
     yay = new Audio('assets//music/applause.mp3');
+
+  var images = ["assets/images/undecided.jpg", "assets/images/thumbs-up.jpg", "assets/images/thumbs-down.jpg"];
+
 
   function resetAll() {
 
@@ -53,28 +56,22 @@ $(document).ready(function () {
   function updateUser(randomNumber, totalScore) {
     if (randomNumber > totalScore) {
 
-      console.log("totalScore: " + totalScore);
-
+      $("#image-holder").html("<img src=" + images[0] + " width='440px'>");
     } else if (randomNumber < totalScore) {
       losses++
+
       $(".loser").text(losses);
+      boo.play();
+      $("#image-holder").html("<img src=" + images[2] + " width='440px'>");
+      resetAll();
 
-
-      if (losses === 5) {
-        lion.play();
-        alert("Better luck next time!");
-        resetAll();
-      } else {
-        boo.play();
-        alert("The crowd is not happy!");
-        resetAll();
-      }
     } else {
       wins++
       yay.play();
       $(".winner").text(wins);
+      $("#image-holder").html("<img src=" + images[1] + " width='440px'>");
       alert("Great Job, you shall be free with your score of " + totalScore)
-      resetAll();
+      // resetAll();
     }
   }
 
