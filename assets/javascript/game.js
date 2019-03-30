@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // declare arrays
 
   var wins = 0,
@@ -6,8 +6,8 @@ $(document).ready(function() {
     totalScore = 0;
   var audio = new Audio("assets//music/money.mp3"),
     boo = new Audio("./assets//music/heckles.mp3"),
-    lion = new Audio("assets//music/lion.mp3"),
-    yay = new Audio("assets//music/applause.mp3");
+    lion = new Audio("../assets//music/lion.mp3"),
+    yay = new Audio("../assets//music/applause.mp3");
 
   var images = [
     "./assets/images/undecided.jpg",
@@ -48,7 +48,7 @@ $(document).ready(function() {
   }
 
   // Add random value to coins
-  $(".coin-image").on("click", function() {
+  $(".coin-image").on("click", function () {
     var id = $(this).attr("id");
     totalScore += coinValues["coin" + id];
     audio.play();
@@ -66,8 +66,8 @@ $(document).ready(function() {
       $(".loser").text(losses);
       $("#image-holder").html("<img src=" + images[2] + " width='440px'>");
       alert("You have made the Gods angry!");
-
       resetAll();
+
     } else {
       wins++;
       yay.play();
@@ -85,10 +85,10 @@ $(document).ready(function() {
   audioElement.setAttribute("src", "./assets/music/epic.mp3");
 
   // Theme Button
-  $(".btn-on").on("click", function() {
+  $(".btn-on").on("click", function () {
     audioElement.play();
   });
-  $(".btn-off").on("click", function() {
+  $(".btn-off").on("click", function () {
     audioElement.pause();
   });
 
